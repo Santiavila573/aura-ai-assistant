@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.1.1/",
+          "react": "https://aistudiocdn.com/react@^19.1.1",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+        }
+      }
+    </script>
+    <style>
+      @keyframes move {
+        0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.2; }
+        50% { transform: translateY(-50vh) translateX(50vw) rotate(180deg); opacity: 0.9; }
+      }
+      @keyframes move2 {
+        0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.2; }
+        50% { transform: translateY(50vh) translateX(-50vw) rotate(-180deg); opacity: 0.8; }
+      }
+      @keyframes move3 {
+        0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.3; }
+        50% { transform: translateY(-30vh) translateX(-40vw) rotate(90deg); opacity: 0.7; }
+      }
+      @keyframes move4 {
+        0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.3; }
+        50% { transform: translateY(30vh) translateX(40vw) rotate(-90deg); opacity: 0.6; }
+      }
+
+      .aurora__item {
+        position: absolute;
+        width: 60vw;
+        height: 60vh;
+        border-radius: 50%;
+        filter: blur(100px);
+        mix-blend-mode: screen;
+      }
+      .aurora__item:nth-of-type(1) {
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle, rgba(138, 43, 226, 0.8) 0%, rgba(138, 43, 226, 0) 70%);
+        animation: move 25s linear infinite;
+      }
+      .aurora__item:nth-of-type(2) {
+        bottom: -50%;
+        right: -50%;
+        background: radial-gradient(circle, rgba(147, 112, 219, 0.6) 0%, rgba(147, 112, 219, 0) 70%);
+        animation: move2 20s linear infinite;
+      }
+      .aurora__item:nth-of-type(3) {
+        top: 0;
+        right: -50%;
+        background: radial-gradient(circle, rgba(186, 85, 211, 0.7) 0%, rgba(186, 85, 211, 0) 70%);
+        animation: move3 22s linear infinite;
+      }
+       .aurora__item:nth-of-type(4) {
+        bottom: 0;
+        left: -50%;
+        background: radial-gradient(circle, rgba(221, 160, 221, 0.6) 0%, rgba(221, 160, 221, 0) 70%);
+        animation: move4 28s linear infinite;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 overflow-hidden">
+    <div class="fixed top-0 left-0 w-full h-full z-0 aurora">
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+      <div class="aurora__item"></div>
+    </div>
+    <div id="root" class="relative z-10"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Aura AI",
+  "description": "Un asistente virtual basado en chat para ayudarte a gestionar tareas, recibir recordatorios y descubrir recomendaciones personalizadas de libros, películas y recetas. Potenciado por Google Gemini.",
+  "requestFramePermissions": []
+}
