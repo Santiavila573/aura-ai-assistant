@@ -90,5 +90,7 @@ Abrir un issue con la propuesta. Crear un fork del repositorio. Enviar un pull r
 📬 Contacto
 
 Autor: Santiago Avila
+<br>
 Correo: avilasantiago917@ngmail.com
+<br>
 Linkedin: https://www.linkedin.com/in/santiago-ávila-301047200
